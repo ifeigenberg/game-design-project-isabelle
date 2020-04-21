@@ -16,7 +16,7 @@ let mySprite2 = sprites.create(img`
 . . . 1 f 1 . . 1 f 1 . . . . . 
 . . . 1 1 1 . . 1 1 1 . . . . . 
 `, SpriteKind.Player)
-mySprite2.setPosition(20, 97)
+mySprite2.setPosition(25, 97)
 let mySprite = sprites.create(img`
 . . . . . . . . . . . . . . . . 
 . . . . . 8 8 8 8 8 . . . . . . 
@@ -35,7 +35,7 @@ let mySprite = sprites.create(img`
 . . . 8 . 8 . . . 8 . 8 . . . . 
 . . 8 8 8 8 . . . 8 8 8 8 . . . 
 `, SpriteKind.Enemy)
-mySprite.setPosition(5, 97)
+mySprite.setPosition(8, 97)
 scene.setBackgroundImage(img`
 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 
 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 
