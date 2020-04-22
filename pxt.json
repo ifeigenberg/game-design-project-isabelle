@@ -1,7 +1,8 @@
 {
     "name": "game design project isabelle",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "settings-blocks": "github:microsoft/pxt-settings-blocks#v1.0.0"
     },
     "description": "",
     "files": [
