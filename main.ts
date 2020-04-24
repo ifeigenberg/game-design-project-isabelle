@@ -180,7 +180,7 @@ scene.setBackgroundImage(img`
 6 6 6 6 6 6 6 6 6 6 6 6 e e e e e e e e 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 e e 4 e e 4 e 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 e e e e e 4 4 4 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 e 4 4 4 4 e e 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 e e 4 4 4 e 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 
 `)
 tiles.setTilemap(tiles.createTilemap(
-            hex`1000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000404040000000404040400000404040000000000000000000000040400000004000000000404000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`,
+            hex`10001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004040400000004040404000004040400000000000000000000000404000000040000000004040a0a0a0a0a0a0a0a0a0a0a0a0a040a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a`,
             img`
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
@@ -188,8 +188,8 @@ tiles.setTilemap(tiles.createTilemap(
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . 2 2 2 . . . 
 2 2 2 2 . . 2 2 2 . 2 . 2 . . . 
-. . . 2 . . 2 . 2 . 2 . 2 . 2 2 
-. . . . . . . . 2 . 2 . 2 . 2 . 
+. . . 2 2 2 2 . 2 2 2 . 2 . 2 2 
+. . . . . . . . 2 . 2 . 2 2 2 . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
@@ -199,7 +199,9 @@ tiles.setTilemap(tiles.createTilemap(
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 `,
-            [myTiles.tile0,sprites.builtin.forestTiles1,sprites.builtin.forestTiles2,sprites.castle.tilePath1,sprites.builtin.forestTiles18,sprites.builtin.forestTiles10],
+            [myTiles.tile0,sprites.builtin.forestTiles1,sprites.builtin.forestTiles2,sprites.castle.tilePath1,sprites.builtin.forestTiles18,sprites.builtin.forestTiles10,sprites.castle.tileGrass3,sprites.castle.tileDarkGrass1,sprites.castle.tilePath9,sprites.builtin.forestTiles3,sprites.castle.tileDarkGrass2,sprites.builtin.forestTiles6],
             TileScale.Sixteen
         ))
-controller.moveSprite(mySprite2)
+controller.moveSprite(mySprite2, 25, 25)
+controller.moveSprite(mySprite, 20, 20)
+mySprite.follow(mySprite2)
