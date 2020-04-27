@@ -38,7 +38,8 @@ let mySprite2 = sprites.create(img`
 . . . 1 1 1 . . 1 1 1 . . . . . 
 `, SpriteKind.Player)
 mySprite2.setPosition(25, 72)
-let mySprite = sprites.create(img`
+let mySprite = 0
+sprites.create(img`
 . . . . . . . . . . . . . . . . 
 . . . . . 8 8 8 8 8 . . . . . . 
 . . . . . 8 d 8 d 8 . . . . . . 
@@ -55,8 +56,7 @@ let mySprite = sprites.create(img`
 . . . . . 8 . . . 8 . . . . . . 
 . . . 8 . 8 . . . 8 . 8 . . . . 
 . . 8 8 8 8 . . . 8 8 8 8 . . . 
-`, SpriteKind.Enemy)
-mySprite.setPosition(8, 72)
+`, SpriteKind.Enemy).setPosition(8, 72)
 scene.setBackgroundImage(img`
 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 
 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 
@@ -208,3 +208,9 @@ controller.moveSprite(mySprite, 20, 20)
 // the background!
 //
 mySprite.follow(mySprite2)
+forever(function () {
+    mySprite2.setVelocity(50, 50)
+    if (mySprite.overlapsWith(mySprite2)) {
+        mySprite.setPosition(14, 72)
+    }
+})
