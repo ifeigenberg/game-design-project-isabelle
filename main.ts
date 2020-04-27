@@ -204,4 +204,7 @@ tiles.setTilemap(tiles.createTilemap(
         ))
 controller.moveSprite(mySprite2, 25, 25)
 controller.moveSprite(mySprite, 20, 20)
+// Nice start so far!  Things are moving and I love
+// the background!
+//
 mySprite.follow(mySprite2)
