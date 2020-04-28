@@ -203,7 +203,7 @@ tiles.setTilemap(tiles.createTilemap(
 mySprite.setPosition(24, 72)
 mySprite2.setPosition(9, 72)
 mySprite.setFlag(SpriteFlag.StayInScreen, true)
-controller.moveSprite(mySprite)
+controller.moveSprite(mySprite, 25, 15)
 mySprite2.follow(mySprite)
 mySprite2.setVelocity(10, 16)
 if (mySprite.overlapsWith(mySprite2)) {
