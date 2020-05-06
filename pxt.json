@@ -3,7 +3,8 @@
     "dependencies": {
         "device": "*",
         "settings-blocks": "github:microsoft/pxt-settings-blocks#v1.0.0",
-        "palette": "*"
+        "palette": "*",
+        "Color Fading": "github:jwunderl/pxt-color#v0.1.3"
     },
     "description": "",
     "files": [
