@@ -19,32 +19,6 @@ namespace myTiles {
 . . . . . . . . . . . . . . . . 
 `
 }
-function level_2 () {
-    tiles.setTilemap(tiles.createTilemap(
-            hex`1000100001010101010101010101010101010101010201010101020101010102010101010101010102010101010101010101020101020101010102010101030301010104010101010101010101030303010303030303030303030301030303030203030303030303030303010303030301030303010101010101010101010101010101010101010101010201010101010101020101010101010101010101010201010101010102010101010101010101010101010101010101010101010201010101010101010101010101010101010101020101010101010102010101010101010101010101020101010101010101010101020101010101010101010101010201010101`,
-            img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . 2 2 . . . . 
-. . . . . . . . . 2 2 . . 2 2 2 
-2 2 2 2 2 2 2 . 2 2 . . . 2 . . 
-. . . . . . . . . . . . . 2 . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-`,
-            [myTiles.tile0,sprites.castle.tileDarkGrass3,sprites.castle.tileDarkGrass2,sprites.castle.tilePath5,sprites.dungeon.chestOpen,sprites.dungeon.collectibleInsignia],
-            TileScale.Sixteen
-        ))
-    scene.cameraFollowSprite(mySprite)
-}
 function level_1 () {
     scene.setBackgroundImage(img`
 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 
@@ -168,16 +142,14 @@ function level_1 () {
 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 e e e e e e e e e e e e e e 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 e e e e 4 4 4 e e e e 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 e e e e 4 4 4 e e 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 e e 4 4 4 4 4 4 e 6 6 6 6 6 6 6 6 6 
 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 e e e e e e e e e e e e e e 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 e e e e e e e e e 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 e e e e e e e e e 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 e e e e e e e e e 6 6 6 6 6 6 6 6 6 
 `)
-    tiles.setTilemap(tiles.createTilemap(
-            hex`1000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000101010000000000030101010000010100000001010001010100000001010000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`,
-            img`
+    scene.setTileMap(img`
 . . . . . . . . . . . . . . . . 
-. . . . 2 2 2 2 2 2 2 . . . . . 
-. . . . 2 . . . . . 2 2 2 2 2 2 
-2 2 2 2 2 . . . . . . . . . . . 
-. . . . . . . 2 2 2 . . . . . . 
-2 2 2 . . 2 2 . . . 2 2 . 2 2 2 
-. . . 2 2 . . . . . . . 2 . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . f f f f . . . . 5 
+f f f . . f f . . . . f f . f f 
+. . . f f . . . . . . . . f . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
@@ -187,10 +159,43 @@ function level_1 () {
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
-`,
-            [myTiles.tile0,sprites.builtin.forestTiles18,sprites.dungeon.chestClosed,sprites.dungeon.chestOpen],
-            TileScale.Sixteen
-        ))
+`)
+    scene.setTile(15, img`
+f f f f f f f f f f f f f f f f 
+f f f f f f f f f f f f f f f f 
+f f f f f f f f f f f f f f f f 
+f f f f f f f f f f f f f f f f 
+f f f f f f f f f f f f f f f f 
+f f f f f f f f f f f f f f f f 
+f f f f f f f f f f f f f f f f 
+f f f f f f f f f f f f f f f f 
+f f f f f f f f f f f f f f f f 
+f f f f f f f f f f f f f f f f 
+f f f f f f f f f f f f f f f f 
+f f f f f f f f f f f f f f f f 
+f f f f f f f f f f f f f f f f 
+f f f f f f f f f f f f f f f f 
+f f f f f f f f f f f f f f f f 
+f f f f f f f f f f f f f f f f 
+`, true)
+    scene.setTile(5, img`
+. b b b b b b b b b b b b b b . 
+b e 4 4 4 4 4 4 4 4 4 4 4 4 4 b 
+b e 4 4 4 4 4 4 4 4 4 4 4 4 e b 
+b e e 4 4 4 4 4 4 4 4 4 4 e e b 
+b b b b b b b d d b b b b b b b 
+. b b b b b b c c b b b b b b . 
+b c c c c c b c c b c c c c c b 
+b c c c c c c b b c c c c c c b 
+b c c c c c c c c c c c c c c b 
+b c c c c c c c c c c c c c c b 
+b b b b b b b b b b b b b b b b 
+b e e e e e e e e e e e e e e b 
+b e e e e e e e e e e e e e e b 
+b c e e e e e e e e e e e e c b 
+b b b b b b b b b b b b b b b b 
+. b b . . . . . . . . . . b b . 
+`, true)
     mySprite.setPosition(24, 72)
     mySprite2.setPosition(9, 72)
     mySprite.setFlag(SpriteFlag.StayInScreen, true)
@@ -202,6 +207,9 @@ function level_1 () {
     }
     mySprite2.setVelocity(10, 16)
 }
+scene.onHitTile(SpriteKind.Player, 5, function (sprite) {
+    game.over(true)
+})
 let mySprite2: Sprite = null
 let mySprite: Sprite = null
 mySprite = sprites.create(img`
